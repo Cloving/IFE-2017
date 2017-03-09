@@ -1,2 +1,2 @@
 # IFE-2017
-###用于提交百度前端技术学院的作业
+###Used to submit operations for Baidu front-end technical college 
