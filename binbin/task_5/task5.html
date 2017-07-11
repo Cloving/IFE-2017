@@ -1,0 +1,33 @@
+<!--基于上一任务
+限制输入的数字在10-100
+队列元素数量最多限制为60个，
+当超过60个时，添加元素时alert出提示
+队列展现方式变化如图，直接用高度表示数字大小
+实现一个简单的排序功能，如冒泡排序（不限制具体算法），
+用可视化的方法表达出来，参考见下方参考资料-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="task5.css">
+    </head>
+    <body>
+        <h1 class="slogan">半星热血红尘洒</h1>
+        <input type="text" name="Query" id="textInput">
+        <div id="displayControl">
+            <button type="button" id = "leftInput" class="btn-type btn-sizePos">左侧输入</button>
+            <button type="button" id = "rightInput" class="btn-type btn-sizePos">右侧输入</button>
+            <button type="button" id = "leftOutput" class="btn-type btn-sizePos">左侧输出</button>
+            <button type="button" id = "rightOutput" class="btn-type btn-sizePos">右侧输出</button>
+        </div>
+        <!--<div id = "reset">
+            添加Resert按钮
+            <button type="button">重置</button>
+        </div>-->
+        <button type="button" class="btn-type" id="resert" >重置</button>
+        <ul id = "query" class="query queryPos"></ul>
+        <ul id = "visualDisplay" class="query visual"></ul>
+        <button type="button" id="sort" class="btn-type sort-sizePos">排序一下啦</button>
+        <script src="task5.js" type="text/javascript"></script>
+    </body>
+</html>
