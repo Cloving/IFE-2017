@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    background-color: #468e8d;
+}
+
+.slogan{
+    width: 50%;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+
+.textInput{
+    width: 500px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: "楷体";
+    color: purple;
+    border: none;
+}
+
+.textareaPos{
+    position: absolute;
+    top:calc(35% - 20px);
+    left:calc(25% - 250px);
+}
+
+.textPosSize{
+    height: 40px;
+    position: absolute;
+    top:calc(35% - 20px);
+    left:calc(75% - 250px);
+}
+
+#displayControl{
+    font-size: 0;
+    width: 100%;
+    position: absolute;
+    top:calc(55% - 25px);
+    left: calc(25% - 350px);
+}
+
+.btn-type{
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    color: white;
+    background-color: #4caf50;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-sizePos{
+    height: 48px;
+    width: 100px;
+    padding: 15px, 32px;
+    margin-left: 60px;
+}
+
+
+.btn-type:hover{
+    border-radius: 10px;
+    font-weight: bold;
+    color: gold;
+}
+
+.query{
+    text-align: center;
+    width: 50%;
+    letter-spacing: -5px;
+}
+
+.queryPos{
+    position: absolute;
+    top: 25%;
+}
+
+.query-style{
+    display: inline-block;
+    letter-spacing: normal;
+    padding: 0 10px;
+    margin: 0 10px;
+    font-family: "微软雅黑";
+    font-size: 30px;
+    color: palegreen;
+    border: 1px solid rebeccapurple;
+}
+
+#resert{
+    position: absolute;
+    top: 70%;
+    left: calc(25% - 100px);
+    height: 48px;
+    width: 200px;
+    padding: 15px, 32px;
+}
+
+.visual{
+    margin-left: 50%;
+    list-style-type: none;
+}
+
+.visual-query{
+    margin-right: 5px;
+    display: inline-block;
+    letter-spacing: normal;
+    font-family: "微软雅黑";
+    font-size: 20px;
+    background-color: palegreen;
+    width: 35px;
+    vertical-align: text-bottom;
+}
+
+.search-sizePos{
+    height: 48px;
+    width: 150px;
+    padding: 15px, 32px;
+    position: absolute;
+    left: calc(75% - 75px);
+    top: 45%;
+}
