@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(bg.jpg);
+}
+
+#button{
+    margin: 100px auto;
+    height: 300px;
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn{
+    display: inline-block;
+    font-family: "微软雅黑";
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    border-radius: 10px;
+    color: orange;
+    transition-duration: .5s;
+    font-size: 20px;
+}
+
+.treeType{
+    background-color: olivedrab;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.root{
+    border: 1px solid black;
+    margin: 100px auto;
+    height: 300px;
+    width: 900px;
+}
+
+.leftTree, .rightTree{
+    border: 1px solid black;
+    width: 400px;
+    height: 250px;
+}
+
+.leftTree section, .rightTree section{
+    width: 150px;
+    height: 200px;
+    border: 1px solid black;
+}
+
