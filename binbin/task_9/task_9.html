@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>javaScript和树</title>
+        <meta charset="UTF-8">
+        <link href="task9.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <section id="button">
+            <button type="button" id="preOrder" class="btn">前序遍历</button>
+            <button type="button" id="inOrder" class="btn">中序遍历</button>
+            <button type="button" id="postOrder" class="btn">后序遍历</button>
+        </section>
+        <section id="search">
+            <input type="text" placeholder="请在这里输入要查询的值" id="inputBox">
+            <button type="button" class="btn" id="searchBtn">search</button>
+        </section>
+        <section id="delete">
+            <button type="button" class="btn" id="delButton">删除</button>
+        </section>
+        <section id="add">
+            <input type="text" placeholder="请在这里输入要添加的内容" id="addBox">
+            <button type="button" class="btn" id="addButton">添加</button>
+        </section>
+            <section id="root" class="treeType root">忆江南
+                <section class="treeType leftTree">渔歌子
+                    <section class="treeType thirdLayer apple">西楼月
+                        <section class="treeType forthLayer">如梦令</section>
+                        <section class="treeType forthLayer">相见欢</section>
+                        <section class="treeType forthLayer">长相思</section>
+                        <section class="treeType forthLayer">点绛唇</section>
+                    </section>
+                    <section class="treeType thirdLayer phone">浣溪沙</section>
+                    <section class="treeType thirdLayer without">
+                        <section class="treeType forthLayer">采桑子</section>
+                        <section class="treeType forthLayer">阮郎归</section>
+                    </section>
+                </section>
+                <section class="treeType middleTree">画堂春
+                    <section class="treeType thirdLayer human">西江月
+                        <section class="treeType forthLayer">南歌子</section>
+                        <section class="treeType forthLayer">醉花阴</section>
+                        <section class="treeType forthLayer">浪淘沙</section>
+                    </section>
+                    <section class="treeType thirdLayer program">鹧鸪天
+                        <section class="treeType forthLayer">鹊桥仙
+                            <section class="treeType fifthLayer">南乡子</section>
+                        </section>
+                        <section class="treeType forthLayer">玉楼春</section>
+                    </section>
+                </section>
+                <section class="treeType rightTree">虞美人</section>
+            </section>
+        <script src="task9.js" type="text/javascript"></script>
+    </body>
+</html>

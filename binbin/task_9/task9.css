@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(bg.jpg);
+}
+
+#button{
+    margin: 100px auto 0 auto;
+    height: 200px;
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn{
+    display: inline-block;
+    font-family: "微软雅黑";
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    border-radius: 10px;
+    color: orange;
+    transition-duration: .5s;
+    font-size: 20px;
+}
+#search, #add, #delete {
+    width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    font-family: "微软雅黑";
+    font-size: 25px;
+    width: 800px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+/* .button{
+    font-size: 25px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: #4caf50;
+    cursor: pointer;
+}
+.button:hover{color: brown;} */
+
+.treeType{
+    background-color: #ffffff;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 80%;
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.root{
+    margin: 100px auto;
+}
+
+/* javascript动态添加的部分 */
+.showSelected{
+     background-color: #4caf50; 
+    /* background: #b0e11e; */
+}
