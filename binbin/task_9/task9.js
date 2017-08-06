@@ -1,27 +1,26 @@
 /* 0. 初始化各种全局变量、设置初始化函数 */
-var preBtn = document.getElementById("preOrder"),
-    inBtn = document.getElementById("inOrder"),
-    postBtn = document.getElementById("postOrder");
-var root = document.getElementById("root");
-var input = document.getElementById("inputBox"),
-    searchBtn = document.getElementById("searchBtn");
-var iteratorObjArray = [], 
-    tempArray;
-var delButton = document.getElementById("delButton"),
-    addInput = document.getElementById("addBox"),
-    addButton = document.getElementById("addButton");    
-var timer = 0;
-var timerSearch = 0;
+var preBtn = document.getElementById("preOrder"),       //获取前序遍历的按钮
+    inBtn = document.getElementById("inOrder"),         //获取中序遍历的按钮
+    postBtn = document.getElementById("postOrder");     //获取后序遍历的按钮
+var root = document.getElementById("root");             //获取树的根节点
+var input = document.getElementById("inputBox"),        //获取查找结点输入框的值
+    searchBtn = document.getElementById("searchBtn");   //获取查找节点的搜索按钮
+var iteratorObjArray = [],                              //声明一个数组，用于存储遍历后获得的有序section标签 
+    tempArray;                                          //声明一个值，用于存储iteratorObjArray类转化为数组后的值
+var delButton = document.getElementById("delButton"),   //获取删除按钮
+    addInput = document.getElementById("addBox"),       //获取添加内容文本框
+    addButton = document.getElementById("addButton");   //获取添加按钮
+var timer = 0;                                          //声明一个值，用于存放前、中、后遍历间歇调用的时间
+var timerSearch = 0;                                    //声明一个值，用于存放查找过程的间歇调用时间
 
 
-
-//初始化函数
+/* 1. 设置初始化函数 */
 function initialize() {
     clearClass("showSelected");
     iteratorObjArray = [];
 }
 
-// 控制显示效果
+/* 2. 设置前序、中序、后序遍历的动画显示效果 */
 function showNode(node) {
     node.style.backgroundColor = "#ffffff";
     setTimeout(function() {
@@ -32,7 +31,7 @@ function showNode(node) {
         node.style.backgroundColor = "#ffffff";
     }, timer += 500);
 }
-//搜索节点过程显示效果
+/* 3-1. 设置搜索节点过程动画显示效果 */
 function showSearchNode(node) {
     node.style.backgroundColor = "#ffffff"
     setTimeout(function() {
@@ -44,14 +43,14 @@ function showSearchNode(node) {
     }, timerSearch += 500);
 }
 
-//搜索节点最终显示效果
+/* 3-2. 搜索节点最终显示效果 */
 function searchNodeResult(node) {
     setTimeout(function() {
         node.style.backgroundColor = "#ff524a";
     }, timerSearch += 500);
 }
 
-/* 1.设置前序、中序、后序各种遍历按钮功能 */
+/* 4. 设置前序、中序、后序各种遍历函数 */
 //前序遍历
 function preOrder(root) {
     if(root){
@@ -81,29 +80,46 @@ function postOrder(root) {
     }
 }
 
-/* 2. 设置对应按钮监听事件 */
+/* 5. 设置前中后及查找按钮的点击监听事件 */
 preBtn.addEventListener("click",function () {
     preOrder(root);
     timer = 0;
 }, false);
-
 inBtn.addEventListener("click", function () {
     inOrder(root);
     timer = 0;
 }, false);
-
 postBtn.addEventListener("click", function () {
     postOrder(root);
     timer = 0;
 }, false);
-
 searchBtn.addEventListener("click", function () {
     var value = input.value;
     searchIndex(root, value);
     timerSearch = 0;
 }, false);
 
-/* 3. 设置前序、后序遍历功能 */
+/* 6. 设置查找结点调用函数,采用层序遍历 */
+function searchIndex(root, value) {
+    var temp = new Array();
+    temp.push(root);
+    while (temp.length > 0) {
+        var item = temp.shift();
+        if(item.firstChild.nodeValue === value){
+            searchNodeResult(item);
+            break;
+        }else{
+            showSearchNode(item);
+            for(var i = 0; i < item.children.length; ++i){
+                temp.push(item.children[i]);   
+            }
+        }
+    }
+    if(temp.length == 0)
+        alert("未找到");
+}
+
+/* 7. 设置前序、后序遍历功能，用于选定节点及删除、添加节点后文档结构的更新 */
 /* 添加前序遍历功能，并存于一个数组中，该数组的功能用于选择确定的元素 */
 function preOrderArray(node) {
     if(node){
@@ -125,7 +141,7 @@ function preOrderArray(node) {
     }
 }
 
-/* 4. 设置标签选定功能 */
+/* 8. 设置标签选定功能 */
 function slectTag() {
     preOrderArray(root);
     tempArray = Array.prototype.slice.call(iteratorObjArray);
@@ -140,7 +156,7 @@ function slectTag() {
 }
 
 
-/* 5. 设置删除功能，用于删除选定的节点和他的子节点 */
+/* 9. 设置删除功能，用于删除选定的节点和他的子节点 */
 function delNode() {
     delButton.onclick = function (e) {
         e.preventDefault();
@@ -154,8 +170,7 @@ function delNode() {
     }
 }
 
-/* 6. 设置添加功能，用于在选定的标签中添加子元素，
-子元素的节点值来自于文本框 */
+/* 10. 设置添加节点功能，用于在选定的标签中添加子元素，子元素的节点值来自于输入文本框 */
 function addNodes() {
     addButton.onclick = function (e) {
         e.preventDefault();
@@ -173,7 +188,7 @@ function addNodes() {
 }
 
 
-/* 7. 增加删除类 */
+/* 11. 增加删除类 */
 function addClass(element, value) {
     if(!element) return false;
     if(!element.className){
@@ -185,44 +200,21 @@ function addClass(element, value) {
         element.className = tempClass;
     }
 }
-
 function removeClass(element, value) {
     if(element.className.indexOf(value) !== -1){
         var tempClass = element.className;
-        tempClass.replace(value, '');
-        element.className = tempClass;
+        //replace() 方法返回一个由替换值替换一些或所有匹配的模式后的新字符串。
+        element.className = tempClass.replace(value, ''); 
+        console.log(element.className);
     }
 }
-//初始化函数，用于清除选定添加的类
 function clearClass(val) {
     tempArray.forEach(function (currentValue) {
         removeClass(currentValue, val);
-    });
+    }, this);
 }
 
-
-//查找结点,采用层序遍历
-function searchIndex(root, value) {
-    var temp = new Array();
-    temp.push(root);
-    while (temp.length > 0) {
-        var item = temp.shift();
-        if(item.firstChild.nodeValue === value){
-            searchNodeResult(item);
-            break;
-        }else{
-            showSearchNode(item);
-            for(var i = 0; i < item.children.length; ++i){
-                temp.push(item.children[i]);   
-            }
-        }
-    }
-    if(temp.length == 0)
-        alert("未找到");
-}
-
-
-/* 页面载入后执行函数， 
+/* 页面加载后执行的函数， 
 设置函数中如果为按钮指定了事件，
 则该函数需要在页面加载时执行，否则按钮功能不会生效*/
 window.onload = function () {
