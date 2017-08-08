@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('bg.jpg');
+} 
+
+form{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+label, input, button{
+    font-family: "微软雅黑";
+    font-size: 25px;
+    height: 35px;    
+    outline: none;
+}
+
+.item3{
+    margin-left: -50px;
+}
+.item3 p{margin-left: 123px;}
+
+input{
+    width: 300px;
+    margin: 0 20px 0 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    
+}
+input:focus{border-color: blue;}
+
+button{
+    width: 100px;
+    border: none;
+    background-color: #337ab7;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{color: orange;}
+
+p{
+    font-size: 18px;
+    color: gray;
+    margin: 3px 0 0 75px;
+    height: 25px;   
+    width: 300px;
+}
+
+.disRed{color: red;}
+.disGreen{color: green;}
+.disBoxGreen{border-color: green;}
+.disBoxRed{border-color: red;}

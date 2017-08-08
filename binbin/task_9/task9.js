@@ -13,7 +13,6 @@ var delButton = document.getElementById("delButton"),   //获取删除按钮
 var timer = 0;                                          //声明一个值，用于存放前、中、后遍历间歇调用的时间
 var timerSearch = 0;                                    //声明一个值，用于存放查找过程的间歇调用时间
 
-
 /* 1. 设置初始化函数 */
 function initialize() {
     clearClass("showSelected");
@@ -124,6 +123,7 @@ function searchIndex(root, value) {
 function preOrderArray(node) {
     if(node){
         iteratorObjArray.push(node);
+        //子节点包括直接后代和后代的后代
         var num = node.children;
         for(var i = 0; i < num.length; ++i){
             preOrderArray(num[i]);
