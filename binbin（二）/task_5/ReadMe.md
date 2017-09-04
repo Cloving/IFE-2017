@@ -4,3 +4,6 @@
 > 2. 排序的动画效果；
 > 3. 移动端的适配；
 
+
+
+http://htmlpreview.github.io/?https://github.com/cloving/IFE-2017/blob/master/binbin/task_5/task5.html

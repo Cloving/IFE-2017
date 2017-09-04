@@ -8,3 +8,4 @@
 > - 校验结果错误时，表单边框显示红色，并在下方显示验证错误的描述文字
 > - 点击提交按钮时，对页面中所有输入进行校验，校验结果显示方式同上。若所有表单校验通过，弹窗显示“提交成功”，否则显示“提交失败”
 
+http://htmlpreview.github.io/?https://github.com/cloving/IFE-2017/blob/master/yaoyao/task_2/task2.html
