@@ -9,4 +9,4 @@
 
 ##### 随便写的，没有严格测试！
 
-*http://htmlpreview.github.io/?https://github.com/cloving/IFE-2017/blob/master/binbin/task_6/task5.html*
+*http://htmlpreview.github.io/?https://github.com/cloving/IFE-2017/blob/master/binbin_2/task_6/task5.html*

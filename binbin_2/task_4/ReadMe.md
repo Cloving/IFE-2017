@@ -12,4 +12,4 @@
 > 4. 输入数字用条形图表示；
 > 5. 排序输入的数字，用条形图表示；
 
-http://htmlpreview.github.io/?https://github.com/cloving/IFE-2017/blob/master/binbin/task_4/task4.html
+http://htmlpreview.github.io/?https://github.com/cloving/IFE-2017/blob/master/binbin_2/task_4/task4.html

@@ -1,1 +1,0 @@
-http://htmlpreview.github.io/?https://github.com/cloving/IFE-2017/blob/master/binbin/task_7/task_7.html
