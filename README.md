@@ -21,7 +21,7 @@
 ### 四、队列与排序
 ### 		  [demo4](http://htmlpreview.github.io/?https://github.com/Cloving/Native-Javascript-demo/blob/master/demo4_%E9%98%9F%E5%88%97%E4%B8%8E%E6%8E%92%E5%BA%8F/%E9%98%9F%E5%88%97%E4%B8%8E%E6%8E%92%E5%BA%8F.html)示意图
 
-![](./demo4_队列与排序/队列与排序.jpg)
+![](./demo4_队列与排序/队列与排序.JPG)
 
 
 ### 五、队列与查找
