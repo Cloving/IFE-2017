@@ -1,0 +1,570 @@
+*{margin: 0;padding: 0;}
+
+html,body{
+  font-family: "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans CJK SC",
+    "WenQuanYi Micro Hei", "Segoe UI", "Source Han Sans SC";
+  width: 100%;
+}
+
+html{min-width: 1200px;}
+
+header{
+    position: relative;
+    height: 50px;
+    font-family: 微软雅黑;
+    padding: 0 66px;
+}
+
+header img{
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    width:30px;
+    height: 30px;
+}
+
+header h1{
+    position: absolute;
+    left: 100px;
+    font-size: 25px;
+    line-height: 50px;
+    font-weight: normal;
+}
+
+header ul{
+    position: absolute;
+    right: 20px;
+    list-style-type: none;
+    letter-spacing: -5px;
+}
+
+header ul li{
+    display: inline-block;
+    letter-spacing: 0;
+}
+
+header ul li:last-child{background: url(img/login.png) no-repeat left center;}
+
+header ul li:first-child a{
+    color: orangered;
+    border-bottom: 3px solid orangered;
+}
+
+header ul li:last-child a{padding-left: 30px;}
+
+/*字体大小为14px,不一定高度也是14px,好像多了一点？*/
+header ul li a{
+    font-size: 14px;
+    line-height: 50px;
+    padding: 14px 20px;
+    color: black;
+    text-decoration: none;
+}
+
+header ul li a:hover{
+    color: orangered;
+    border-bottom: 3px solid orangered;
+}
+
+#section1{position: relative;}
+
+/*设置背景颜色让图片变暗，文字更清晰，利用绝对定位，覆盖全部*/
+#section1 div{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 240px 0 0 150px;
+}
+
+#section1 div h2{
+    font-size: 60px;
+    line-height: 70px;
+    color: #fff;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+#section1 div p{
+    width: 300px;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+#section1 div a{
+    color: #fff;
+    background-color: orangered;
+    padding: 15px 100px;
+    text-decoration: none;
+}
+
+#section1 div a:hover{
+    color: orangered;
+    background-color: #fff;
+    border-radius: 35px;
+}
+
+#section1 img{
+    width: 100%;
+    display: block;
+}
+
+/*页面的第二部分*/
+#section2{
+    display: flex;
+    letter-spacing: -5px;
+}
+
+.four-parts{
+    justify-content: space-between;
+    height: 240px;
+    letter-spacing: normal;
+    font-size: 14px;
+    /* width: 310px; */
+    /* display: inline-block; */
+}
+
+.large-width-part{width: calc((100% - 640px)/2);}
+
+.four-parts img{margin: 50px 140px 60px;}
+
+.large-width-part img{margin-left: calc((100% - 40px)/2);}
+
+.four-parts p{
+    width: 160px;
+    margin-left:calc((100% - 160px)/2);
+    padding-right:calc((100% - 160px)/2);
+    text-align: center;
+    border-right: 1px solid rgb(196, 196, 196);
+}
+
+/*页面第三部分*/
+#section3{
+    position: relative;
+    height: 340px;
+    width: 100%;
+    background-color: rgb(237, 237, 237);
+}
+
+#section3 img{
+    position: absolute;
+    left:calc((100% - 92px)/2);
+    top: 70px;
+}
+
+#section3 h1{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top:200px;
+    font-size: 40px;
+    color: rgb(161, 161, 161);
+    font-weight:normal;
+}
+
+/*页面第四部分*/
+#section4{position: relative;}
+
+#section4 h3{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    text-align: center;
+    font-weight:normal;
+    color: white;
+}
+
+.border1{
+    position: absolute;
+    top: 100px;
+    left: calc((100% - 40px)/2);
+    border-color: white;
+}
+
+.border{
+    width: 0;
+    height: 0;
+    border-width:2px 30px; 
+    border-style: solid;
+}
+
+/*页面第四部分*/
+#section4>p{
+    position: absolute;
+    top: 130px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+#section4 form{
+    position: absolute;
+    width: 1200px;
+    top: 200px;
+    height: 100px;
+    margin-left: calc((100% - 1200px)/2);   
+}
+
+.dropDown-Bar{
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    background-color: white;
+    width: 254px;
+    height: 35px;
+    margin-right: 50px;
+}
+
+.dropDown-Bar>p{
+    margin-left: 5px;
+    line-height: 35px;
+    color: rgb(210, 210, 210); 
+}
+
+.dropDown-Bar:last-child{margin-right: -50px;}
+
+.outline{outline: 2px solid orangered;}
+
+.dropDown-Bar:hover{outline: 2px solid orangered;}
+
+.dropDown-Button{
+    position: absolute;
+    bottom: 7px;
+    right: 5px;
+    background-color: rgb(190, 79, 72);
+    width: 21px;
+    height: 21px;
+}
+
+.dropDown-Button-Border{
+    display: block;
+    width: 13px;
+    height: 13px;
+    border:  solid white;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg) translate(2px,-3px);
+}
+
+.dropDown-Bar button{
+    background-color: rgb(190, 79, 72);
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    letter-spacing: 25px;
+    text-indent: 25px;
+    cursor: pointer;
+}
+.noOutline:hover{outline-width: 0px;}
+
+#section4 img{width: 100%;display: block;}
+
+.dropDown-Menu{
+    outline: 2px solid orangered;
+    position: absolute;
+    left: 0px;
+    height: 175px;
+    width: 254px;
+    background-color:rgb(228, 226, 229);
+    position: absolute;
+    top: 35px;
+}
+
+.city{width: 254px;height: 35px;position: relative;}
+
+.firstCity, .city:hover{background-color: rgb(190, 79, 72); }
+
+.city p{
+    display: block;
+    color: rgb(148, 148, 150);
+    margin-left: 40px;
+    line-height: 35px;
+}
+
+.dropDown-Menu-Selector{
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 15px;
+    border:  solid rgb(228, 226, 229);
+    border-width: 0 2px 2px 0;   
+    height: 15px;
+    width: 8px;
+    transform: rotate(45deg);   
+}
+
+/*页面第五部分*/
+#section5{
+    background-color: rgb(248,248,248);
+    width: 100%;
+    height:650px;
+}
+
+#section5 ul{
+    display: flex;
+    padding-top: 80px;
+    list-style-type: none;
+    letter-spacing: -5px;
+}
+
+.show-pic{
+    justify-content: space-between;
+    letter-spacing: normal;
+    /* display: inline-block; */
+    /* width:220px; */
+    padding: 0 calc((100% - 880px)/8);
+}
+
+.title{
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.titleInstrution{
+    font-size: 14px;
+    color:rgb(148, 148, 150);
+    text-align: center;
+}
+
+.shanghai-Spac{
+    font-size: 20px;
+    margin-right: -40px;
+    text-indent: 0px;
+    letter-spacing: 40px;
+}
+
+/*页面第六部分*/
+#section6{width: 100%;letter-spacing: -5px;}
+
+#s6-top1{position:relative;width:950px;}
+
+#s6-top1-1{
+    text-align: center;
+    width:100%;
+    position: absolute;
+    top: 150px;
+    color: white;
+}
+
+#s6-top1-1 h2{font-size: 50px;}
+
+#s6-top1-1 h3{font-size: 150px;margin-top: -30px;}
+
+#s6-top1-1 p{font-size: 20px; margin-bottom: 20px;}
+
+#s6-top1 img{width: 100%;display: inline-block;}
+
+#s6-top2{width: calc(100% - 955px);}
+
+#s6-top2 h3{
+    font-family: 黑体;
+    font-size: 25px;
+    text-align: center;
+    margin: 150px auto 40px;;
+}
+
+#s6-top2 p{margin: 0 50px 0;}
+
+.texLayout{
+    font-family: 宋体;
+    font-size: 14px;
+    color: #aaa;
+    line-height: 25px;
+}
+
+/*百分比是相对于父元素的百分比*/
+#s6-top2 button{
+    margin: 60px calc(50% - 60px) 30px;
+    width: 120px;
+    height: 30px;
+    border: 1px solid rgb(255, 125, 135);
+    background-color: white;
+    color: rgb(255, 125, 135);
+    cursor: pointer;
+}
+
+#s6-top2 button:hover{
+    background-color:  rgb(255, 125, 135);;
+    color: white;
+}
+
+.switchButton{text-align: center;letter-spacing: 15px;}
+
+/*行内元素span设置宽度高度没有卵用，将其设置成行内块级元素才可以*/
+.circle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #aaa;
+    cursor: pointer;
+}
+
+.circleColor{background-color: rgb(147, 147, 147);}
+
+.mar-bot-5{margin-bottom: -3px;}
+.backRed-colWh{background-color: rgb(232, 80, 79);color: white;}
+.backWh-colRed{background-color: white;color: rgb(232, 80, 79);}
+.fr-co{color: red;}
+.tex-cet{text-align: center;}
+.fr25{font-size: 25px;}
+.fr-we-normal{font-weight: normal;}
+.in-bl{display: inline-block;letter-spacing: normal; vertical-align: top;}
+.noType{list-style-type: none;}
+.wid475-hei520{width: 475px;height: 420px;}
+.padTop200{padding-top: 100px;}
+.colGray{color: gray;}
+.linHei40{line-height: 40px;}
+
+
+#s6-bottom1,#s6-bottom2{
+    font-family: 黑体;
+    line-height: 40px;
+    margin-top: -5px;
+}
+
+.border2,.border3{margin: 20px auto;}
+
+#s6-bottom3{width: calc(100% - 955px);margin-bottom: -5px;}
+#s6-bottom3 img{width: 100%;height: 520px}
+
+#s6-bottom1 button,#s6-bottom2 button{
+    background-color: transparent;
+    width: 200px;
+    height: 50px;
+    margin: 30px 137px;
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#s6-bottom1 button{border-color: white;color: white; }
+#s6-bottom2 button{border-color:rgb(232, 80, 79);color: rgb(232, 80, 79)}
+
+/*第七部分*/
+#section7{margin: 100px 0 100px 0;}
+#section7 h3{font-family: 黑体;margin-bottom: 10px}
+#section7 header{
+    height: 220px;
+}
+
+.border4{
+    border-color: rgb(232, 80, 79);
+    border-width:1px 20px; 
+    margin-left:  calc(50% - 20px);
+}
+
+#section7 header p{
+    margin-top: 20px;
+    font-family: 宋体;
+    color: rgb(147, 147, 147);
+    font-size: 12px;
+    width: 420px;
+    margin-left: calc(50% - 210px);
+    line-height: 20px;
+}
+
+.connectUs{margin-left:calc(50% - 490px);}
+
+.sidebar{width: 325px;margin-right: 50px;}
+.sidebar section{position: relative;}
+
+.formPage{width: 655px;}
+
+/*边框宽度必须灾后设置*/
+.moreButton{
+    display: block;
+    width: 8px;
+    height: 8px;
+    border: solid rgb(147, 147, 147);
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 35px;
+    top: 105px; 
+    cursor: pointer;
+}
+.last-moreButton{
+    position: absolute;
+    top: 55px;
+}
+
+.more{
+    font-size: 12px;
+    line-height: 20px;
+    text-align: right;
+    color: rgb(147, 147, 147);
+}
+
+.eqWidHei-input{
+    margin: 15px 15px 15px 0;
+    padding-left: 10px;
+    border: none;
+    height: 40px;
+    width: 300px;
+    background-color: #ededef;
+}
+
+.formPage textarea{
+    margin: 15px 0px 15px 0;
+    resize: none;
+    padding: 10px;
+    border: none;
+    width: 620px;
+    height: 80px;
+    background-color: #ededef;
+}
+
+.formPage button{
+    margin-top: 15px;
+    width: 640px;
+    border: none;
+    height: 40px;
+    background-color: #ededef;
+    cursor: pointer;
+}
+
+#section8{
+    height: 400px;
+    background-color: #33362f;
+    color: white;
+}
+
+#section8 h3{
+    position: relative;
+    padding-top: 100px;
+    margin-bottom: 10px;
+}
+
+#section8 p{
+    width: 450px;
+    font-size: 14px;
+    margin-left: calc(50% - 225px);
+    line-height: 20px;
+}
+
+#social img{
+    width: 240px;
+    margin-left: calc(50% - 120px);
+    margin-top: 50px;
+}
+
+/*页面最底部*/
+footer{
+    position: relative;
+    color: white;
+    background-color: #30303a;
+    height: 50px;
+}
+
+footer p{position: absolute;top:20px;left: 150px;}
+footer a{color:white;text-decoration: none; position: absolute;bottom:10px;right: 30px;}
+footer a:hover{font-size: 20px;}
+

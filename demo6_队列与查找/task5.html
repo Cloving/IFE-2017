@@ -1,0 +1,35 @@
+<!-- 基于任务四进行升级
+将新元素输入框从input改为textarea
+允许一次批量输入多个内容，格式可以为数字、中文、英文等，
+可以通过用回车，逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）
+等符号作为不同内容的间隔
+增加一个查询文本输入框，和一个查询按钮，
+当点击查询时，将查询词在各个元素内容中做模糊匹配，
+将匹配到的内容进行特殊标识，如文字颜色等。
+举例，内容中有abcd，查询词为ab或bc，则该内容需要标识 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="task5.css">
+    </head>
+    <body>
+        <h1 class="slogan">队列与查找</h1>
+        <textarea rows="4" cols="20" id="textInput" class="textInput textareaPos"></textarea>
+        <div id="displayControl">
+            <button type="button" id = "leftInput" class="btn-type btn-sizePos">左侧输入</button>
+            <button type="button" id = "rightInput" class="btn-type btn-sizePos">右侧输入</button>
+            <button type="button" id = "leftOutput" class="btn-type btn-sizePos">左侧输出</button>
+            <button type="button" id = "rightOutput" class="btn-type btn-sizePos">右侧输出</button>
+        </div>
+        <!--<div id = "reset">
+            添加Resert按钮
+            <button type="button">重置</button>
+        </div>-->
+        <button type="button" class="btn-type" id="resert" >重置</button>
+        <ul id = "query" class="query queryPos"></ul>
+        <input type="text" placeholder="请输入需要匹配的字符串" id="searchBox" class="textInput textPosSize">
+        <button type="button" id="searchButton" class="btn-type search-sizePos">搜索</button>
+        <script src="task5.js" type="text/javascript"></script>
+    </body>
+</html>
